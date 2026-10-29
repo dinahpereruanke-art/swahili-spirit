@@ -1,9 +1,15 @@
+import FeaturedSafaris from "../components/FeaturedSafaris";
+import About from "../components/About";
 import Image from "next/image";
 import Link from "next/link";
 import PackageCard from "@/components/PackageCard";
 import { packages } from "@/data/packages";
 import { gallery } from "@/data/gallery";
 import { whatsappLink } from "@/lib/contact";
+import WhyChooseUs from "../components/WhyChooseUs";
+import Testimonials from "../components/Testimonials";
+import EnquiryForm from "../components/EnquiryForm";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 export default function Home() {
   return (

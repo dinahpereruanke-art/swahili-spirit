@@ -26,7 +26,7 @@ export const packages = [
     image: "/images/maasaihut.jpg",
     name: "Maasai Culture Experience",
     days: 2,
-    destination: "A Maasai community",
+    destination: "a Maasai community",
     price: 250,
     summary:
       "Visit a Maasai homestead, learn the story behind the beadwork and share a meal with the community.",

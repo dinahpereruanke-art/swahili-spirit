@@ -13,7 +13,7 @@ export default function Nav() {
           <Link href="/packages" className="hover:text-sun">Safaris</Link>
           <Link href="/#about" className="hover:text-sun">About</Link>
           <Link
-            href="#contact"
+            href="/#contact"
             className="rounded-full bg-kanga px-4 py-2 hover:bg-sun hover:text-ink"
           >
             Contact
