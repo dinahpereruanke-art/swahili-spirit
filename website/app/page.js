@@ -1,15 +1,12 @@
-import FeaturedSafaris from "../components/FeaturedSafaris";
-import About from "../components/About";
 import Image from "next/image";
 import Link from "next/link";
 import PackageCard from "@/components/PackageCard";
 import { packages } from "@/data/packages";
 import { gallery } from "@/data/gallery";
 import { whatsappLink } from "@/lib/contact";
-import WhyChooseUs from "../components/WhyChooseUs";
-import Testimonials from "../components/Testimonials";
-import EnquiryForm from "../components/EnquiryForm";
-import WhatsAppButton from "../components/WhatsAppButton";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import Testimonials from "@/components/Testimonials";
+import EnquiryForm from "@/components/EnquiryForm";
 
 export default function Home() {
   return (
@@ -106,6 +103,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why choose us */}
+      <WhyChooseUs />
+
       {/* About */}
       <section id="about" className="scroll-mt-24 bg-ocean px-6 py-24">
         <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2">
@@ -148,6 +148,25 @@ export default function Home() {
           </div>
         </div>
         <div className="kanga-stripe mx-auto mt-24 h-3 max-w-6xl" />
+      </section>
+
+      {/* Testimonials */}
+      <Testimonials />
+
+      {/* Enquiry */}
+      <section id="enquire" className="scroll-mt-24 bg-white px-6 py-24">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="font-display text-4xl font-extrabold md:text-6xl">
+            Plan your safari
+          </h2>
+          <p className="mt-3 max-w-lg text-lg text-ink/70">
+            Tell us your dates and how many people are travelling. We will
+            reply with a plan and a price.
+          </p>
+          <div className="mt-10">
+            <EnquiryForm />
+          </div>
+        </div>
       </section>
     </main>
   );

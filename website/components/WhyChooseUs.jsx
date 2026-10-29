@@ -1,22 +1,42 @@
 const items = [
-  { icon: "🦁", title: "Local expert guides", text: "Guides who know the parks and the Maasai communities." },
-  { icon: "🚙", title: "Comfortable 4x4 vehicles", text: "Pop-up roof vehicles for the best game viewing." },
-  { icon: "🏖️", title: "Safari plus beach", text: "Combine the Mara with Diani or Lamu in one trip." },
-  { icon: "💰", title: "Honest pricing", text: "Clear quotes with no hidden costs." },
+  {
+    title: "Local expert guides",
+    text: "Guides who know the parks and the Maasai communities.",
+  },
+  {
+    title: "Comfortable 4x4 vehicles",
+    text: "Pop-up roof vehicles for the best game viewing.",
+  },
+  {
+    title: "Safari plus beach",
+    text: "Combine the Mara with Diani or Lamu in one trip.",
+  },
+  {
+    title: "Honest pricing",
+    text: "Clear quotes with no hidden costs.",
+  },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section style={{ padding: "60px 20px", textAlign: "center" }}>
-      <h2 style={{ color: "#b3261e" }}>Why travel with us</h2>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 20, maxWidth: 1000, margin: "30px auto 0" }}>
-        {items.map((i) => (
-          <div key={i.title} style={{ background: "#fff7e6", borderRadius: 16, padding: 24, borderTop: "6px solid #e0a100" }}>
-            <div style={{ fontSize: 40 }}>{i.icon}</div>
-            <h3>{i.title}</h3>
-            <p>{i.text}</p>
-          </div>
-        ))}
+    <section className="bg-sun px-6 py-24">
+      <div className="mx-auto max-w-6xl">
+        <h2 className="font-display text-4xl font-extrabold md:text-6xl">
+          Why travel with us
+        </h2>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {items.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-3xl border-t-8 border-ink bg-white p-6"
+            >
+              <h3 className="font-display text-2xl font-extrabold">
+                {item.title}
+              </h3>
+              <p className="mt-3 text-ink/80">{item.text}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

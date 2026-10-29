@@ -1,19 +1,27 @@
+// Add only real reviews from real guests, with their permission.
 const reviews = [
-  { name: "Client name", from: "Country", text: "Replace with a real review from a past client." },
-  { name: "Client name", from: "Country", text: "Replace with a real review from a past client." },
+  // { quote: "Their words here.", name: "Guest name", country: "Country" },
 ];
 
 export default function Testimonials() {
+  if (reviews.length === 0) return null;
+
   return (
-    <section style={{ padding: "60px 20px", background: "#3b2a1a", color: "#fff" }}>
-      <h2 style={{ textAlign: "center", color: "#e0a100" }}>What our guests say</h2>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, maxWidth: 900, margin: "30px auto 0" }}>
-        {reviews.map((r, i) => (
-          <blockquote key={i} style={{ background: "rgba(255,255,255,.08)", padding: 20, borderRadius: 14, margin: 0 }}>
-            <p>"{r.text}"</p>
-            <footer style={{ marginTop: 10, color: "#e0a100" }}>{r.name}, {r.from}</footer>
-          </blockquote>
-        ))}
+    <section className="bg-ocean px-6 py-24">
+      <div className="mx-auto max-w-6xl">
+        <h2 className="font-display text-4xl font-extrabold md:text-6xl">
+          What our guests say
+        </h2>
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          {reviews.map((r) => (
+            <figure key={r.name} className="rounded-3xl bg-white p-8">
+              <blockquote className="text-lg">&ldquo;{r.quote}&rdquo;</blockquote>
+              <figcaption className="mt-4 font-bold">
+                {r.name}, {r.country}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
       </div>
     </section>
   );
